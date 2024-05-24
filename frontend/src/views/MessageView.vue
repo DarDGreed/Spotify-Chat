@@ -12,18 +12,18 @@
       <div class="flex flex-col p-4 overflow-auto" style="height: 500px;">
         <div v-for="msg in messages" :key="msg.id" class="flex w-full mt-2">
           <div v-if="msg.username === username" class="flex items-end ml-auto">
-            <div class="bg-violet-600 text-white p-3 rounded-l-lg rounded-br-lg">
-              <p class="text-sm text-white">{{ msg.text }}</p>
-              <iframe v-if="msg.embedUrl" :src="msg.embedUrl" class="w-full" height="250" frameborder="0"
+            <div class="bg-violet-600 text-white p-2 rounded-l-lg rounded-br-lg w-[350px] break-words">
+              <p class="text-sm text-white whitespace-normal">{{ msg.text }}</p>
+              <iframe v-if="msg.embedUrl" :src="msg.embedUrl" class="w-full" height="85" frameborder="0"
                 allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
             </div>
             <span class="text-sm text-white-800 leading-none ml-3 font-bold mb-6">You</span>
           </div>
           <div v-else class="flex items-end">
-            <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
-              <p class="text-sm text-black">{{ msg.text }}</p>
-              <iframe v-if="msg.embedUrl" :src="msg.embedUrl" class="w-full" height="250" frameborder="0"
+            <div class="bg-gray-300 p-2 rounded-r-lg rounded-bl-lg w-[350px] break-words">
+              <p class="text-sm text-black whitespace-normal">{{ msg.text }}</p>
+              <iframe v-if="msg.embedUrl" :src="msg.embedUrl" class="w-full" height="85" frameborder="0"
                 allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
             </div>
