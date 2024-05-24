@@ -77,6 +77,7 @@ const selectedTrack = ref(null);
 const isLoggedIn = ref(false);
 const username = ref('');
 const router = useRouter();
+const message = ref([]);
 
 const topSongs = [
   { url: "https://open.spotify.com/embed/track/29WxJqIfDRMo9isV07kbJP", bgColor: "bg-violet-900" },

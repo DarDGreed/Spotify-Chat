@@ -83,7 +83,6 @@ export default {
         // Error fetching dashboard message
       }
     };
-
     onMounted(fetchDashboard);
 
     return { username, isLoggedIn };
